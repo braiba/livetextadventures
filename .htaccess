@@ -1,0 +1,6 @@
+RewriteEngine on
+
+RewriteBase /lta/
+
+RewriteRule fingerprinted/[^/]+/(.*)$ ./$1 [L,QSA]
+RewriteRule ^([^.]*)$ ./index.php?request_url=$1 [L,QSA]
